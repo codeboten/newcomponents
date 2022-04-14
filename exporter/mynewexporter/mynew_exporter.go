@@ -8,8 +8,7 @@ import (
 	"go.opentelemetry.io/collector/model/pdata"
 )
 
-// mynewExporter is the implementation of file exporter that writes telemetry data to a file
-// in Protobuf-JSON format.
+// mynewExporter is the implementation of an example exporter
 type mynewExporter struct {
 }
 
@@ -37,7 +36,6 @@ func (e *mynewExporter) Start(context.Context, component.Host) error {
 	return err
 }
 
-// Shutdown stops the exporter and is invoked during shutdown.
 func (e *mynewExporter) Shutdown(context.Context) error {
 	return nil
 }
