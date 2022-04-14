@@ -13,7 +13,7 @@ const (
 	typeStr = "mynew"
 )
 
-// NewFactory creates a factory for OTLP exporter.
+// NewFactory creates a factory for mynew exporter.
 func NewFactory() component.ExporterFactory {
 	return component.NewExporterFactory(
 		typeStr,
