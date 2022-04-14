@@ -1,0 +1,17 @@
+receivers:
+    mynew:
+        collection_interval: 5s
+
+exporters:
+    mynew:
+    logging:
+
+processors:
+    mynew:
+    batch:
+service:
+    pipelines:
+        metrics:
+            receivers: [mynew]
+            exporters: [mynew, logging]
+            processors: [mynew, batch]
