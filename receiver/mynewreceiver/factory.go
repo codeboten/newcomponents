@@ -29,13 +29,13 @@ func createDefaultConfig() config.Receiver {
 }
 
 func createTracesReceiver(ctx context.Context, params component.ReceiverCreateSettings, rConf config.Receiver, consumer consumer.Traces) (component.TracesReceiver, error) {
-	return mynewReceiver{}, nil
+	return &mynewReceiver{}, nil
 }
 
 func createMetricsReceiver(ctx context.Context, params component.ReceiverCreateSettings, rConf config.Receiver, consumer consumer.Metrics) (component.MetricsReceiver, error) {
-	return mynewReceiver{}, nil
+	return &mynewReceiver{}, nil
 }
 
 func createLogsReceiver(ctx context.Context, params component.ReceiverCreateSettings, rConf config.Receiver, consumer consumer.Logs) (component.LogsReceiver, error) {
-	return mynewReceiver{}, nil
+	return &mynewReceiver{}, nil
 }

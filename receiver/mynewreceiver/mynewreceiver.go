@@ -1,8 +1,18 @@
 package mynewreceiver // import "github.com/codeboten/newcomponents/receiver/mynewreceiver"
 
-import "go.opentelemetry.io/collector/component"
+import (
+	"context"
+
+	"go.opentelemetry.io/collector/component"
+)
 
 type mynewReceiver struct {
-	component.StartFunc
-	component.ShutdownFunc
+}
+
+func (r *mynewReceiver) Start(_ context.Context, host component.Host) error {
+	return nil
+}
+
+func (r *mynewReceiver) Shutdown(_ context.Context) error {
+	return nil
 }
