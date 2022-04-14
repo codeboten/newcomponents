@@ -1,0 +1,14 @@
+exporters:
+  - import: go.opentelemetry.io/collector/exporter/loggingexporter
+    gomod: go.opentelemetry.io/collector v0.40.0
+  - gomod: "github.com/codeboten/newcomponents/exporter/mynewexporter v0.0.0-20220413224125-9a057a954715"
+
+receivers:
+  - import: go.opentelemetry.io/collector/receiver/otlpreceiver
+    gomod: go.opentelemetry.io/collector v0.40.0
+  - gomod: "github.com/codeboten/newcomponents/receiver/mynewreceiver v0.0.0-20220413224125-9a057a954715"
+
+processors:
+  - import: go.opentelemetry.io/collector/processor/batchprocessor
+    gomod: go.opentelemetry.io/collector v0.40.0
+  - gomod: "github.com/codeboten/newcomponents/processor/mynewprocessor v0.0.0-20220413224125-9a057a954715"
