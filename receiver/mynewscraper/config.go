@@ -1,10 +1,10 @@
-package mynewreceiver // import "github.com/codeboten/newcomponents/receiver/mynewreceiver"
+package mynewscraper // import "github.com/codeboten/newcomponents/receiver/mynewscraper"
 
 import (
 	"go.opentelemetry.io/collector/config/confighttp"
 	"go.opentelemetry.io/collector/receiver/scraperhelper"
 
-	"github.com/codeboten/newcomponents/receiver/mynewreceiver/internal/metadata"
+	"github.com/codeboten/newcomponents/receiver/mynewscraper/internal/metadata"
 )
 
 // Config defines the configuration for the various elements of the receiver agent.

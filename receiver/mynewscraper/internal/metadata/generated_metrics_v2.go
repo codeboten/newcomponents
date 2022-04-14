@@ -13,7 +13,7 @@ type MetricSettings struct {
 	Enabled bool `mapstructure:"enabled"`
 }
 
-// MetricsSettings provides settings for mynewreceiver metrics.
+// MetricsSettings provides settings for mynewscraper metrics.
 type MetricsSettings struct {
 }
 
@@ -75,7 +75,7 @@ func (mb *MetricsBuilder) EmitForResource(ro ...ResourceOption) {
 		op(rm.Resource())
 	}
 	ils := rm.ScopeMetrics().AppendEmpty()
-	ils.Scope().SetName("otelcol/mynewreceiver")
+	ils.Scope().SetName("otelcol/mynewscraper")
 	ils.Metrics().EnsureCapacity(mb.metricsCapacity)
 	if ils.Metrics().Len() > 0 {
 		mb.updateCapacity(rm)

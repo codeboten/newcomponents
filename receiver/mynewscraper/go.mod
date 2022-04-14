@@ -1,4 +1,4 @@
-module github.com/codeboten/newcomponents/receiver/mynewreceiver
+module github.com/codeboten/newcomponents/receiver/mynewscraper
 
 go 1.17
 

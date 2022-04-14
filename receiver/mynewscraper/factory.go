@@ -1,4 +1,4 @@
-package mynewreceiver // import "github.com/codeboten/newcomponents/receiver/mynewreceiver"
+package mynewscraper // import "github.com/codeboten/newcomponents/receiver/mynewscraper"
 
 import (
 	"context"
@@ -10,16 +10,17 @@ import (
 	"go.opentelemetry.io/collector/receiver/scraperhelper"
 )
 
-const typeStr = "mynew"
+const typeStr = "mynewscraper"
 
-var errConfigNotMyNewConfig = errors.New("config was not a mynew receiver config")
+var errConfigNotMyNewConfig = errors.New("config was not a mynewscraper receiver config")
 
 // NewFactory creates a new receiver factory
 func NewFactory() component.ReceiverFactory {
 	return component.NewReceiverFactory(
 		typeStr,
 		createDefaultConfig,
-		component.WithMetricsReceiver(createMetricsReceiver))
+		component.WithMetricsReceiver(createMetricsReceiver),
+	)
 }
 
 func createDefaultConfig() config.Receiver {

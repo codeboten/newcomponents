@@ -1,4 +1,4 @@
-package mynewreceiver // import "github.com/codeboten/newcomponents/receiver/mynewreceiver"
+package mynewscraper // import "github.com/codeboten/newcomponents/receiver/mynewscraper"
 
 import (
 	"context"
@@ -7,7 +7,7 @@ import (
 	"go.opentelemetry.io/collector/model/pdata"
 	"go.uber.org/zap"
 
-	"github.com/codeboten/newcomponents/receiver/mynewreceiver/internal/metadata"
+	"github.com/codeboten/newcomponents/receiver/mynewscraper/internal/metadata"
 )
 
 type mynewScraper struct {
