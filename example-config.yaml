@@ -1,6 +1,5 @@
 receivers:
     mynew:
-        collection_interval: 5s
 
 exporters:
     mynew:
